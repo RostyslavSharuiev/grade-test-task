@@ -1,0 +1,47 @@
+@import url('./utils/font.scss');
+
+@import 'tailwindcss';
+
+/* FONTS */
+@theme {
+  --font-formular: Formular, ui-serif, serif;
+}
+
+/* BREAKPOINT */
+@theme {
+  --breakpoint-md: 36.0625rem;
+  --breakpoint-lg: 75rem;
+  --breakpoint-xl: 85.4375rem;
+}
+
+/* COLORS */
+@theme {
+  /* TEXT */
+  --color-foreground: #394155;
+  --color-foreground-secondary: #798595;
+
+  /* BUTTON */
+  --color-button-background-primary: linear-gradient(
+    90.66deg,
+    #3cb9a0 0.57%,
+    #1786ac 99.43%
+  );
+  --color-button-foreground-primary: #fff;
+
+  --color-button-background-secondary: linear-gradient(
+        90deg,
+        #e6f7f5 0%,
+        #f8fcfc 100%
+      )
+      padding-box,
+    linear-gradient(90deg, #aacedb 0%, #bee2e0 100%) border-box;
+  --color-button-foreground-secondary: #394155;
+
+  --color-button-background-hovered: #36a8a0;
+}
+
+@layer base {
+  body {
+    @apply font-medium text-foreground relative;
+  }
+}
