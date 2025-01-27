@@ -1,28 +1,25 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 
-import { CardButton } from '../cardButton';
-import { Lang } from '@/types/types';
+import { RootButton } from '../rootButton';
+import { inject } from 'vue';
 
-const { locale, t } = useI18n();
-
-const handleClick = () => {
-  locale.value = locale.value === Lang.EN ? Lang.UK : Lang.EN;
-};
+const { t } = useI18n();
+const injectedValues = inject<{ handleToggleModal: () => void }>('modal');
 </script>
 
 <template>
   <article class="flex flex-col w-full gap-[10px] md:flex-row md:w-auto">
-    <CardButton variant="primary">
+    <RootButton variant="primary">
       <a href="https://google.com">
         {{ t('buttons.showAll') }}
-      </a></CardButton
-    >
+      </a>
+    </RootButton>
 
-    <CardButton
+    <RootButton
       variant="secondary"
-      @click="handleClick">
+      @click="injectedValues?.handleToggleModal">
       {{ t('buttons.write') }}
-    </CardButton>
+    </RootButton>
   </article>
 </template>
