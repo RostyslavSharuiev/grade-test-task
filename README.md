@@ -39,3 +39,7 @@ Structure of data:
   },
 ];
 ```
+
+# Issues
+
+Tailwind updated version to 4 and changed root rules for adding custom styles, so we need more time to understand new standards

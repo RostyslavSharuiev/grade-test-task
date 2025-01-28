@@ -10,7 +10,7 @@ import { Modal } from './components/modal';
 
 const isLoading = ref<boolean>(true);
 const student = ref<Student[]>([]);
-const isModalOpen = ref<boolean>(true);
+const isModalOpen = ref<boolean>(false);
 
 const handleToggleModal = () => {
   isModalOpen.value = !isModalOpen.value;
